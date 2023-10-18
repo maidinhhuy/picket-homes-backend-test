@@ -17,8 +17,7 @@ app.use(express.static("public"));
 
 app.post('/', upload.single('file'), (req: Request, res: Response) => {
     var payload: Buffer | undefined = req.file?.buffer;
-      // Defind row
-      interface IRow {
+    interface IRow {
         houseId: [number],
         houseAddress: [string]
     };
